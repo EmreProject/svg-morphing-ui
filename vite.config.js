@@ -3,7 +3,7 @@ const path=require("path");
 
 
 export default defineConfig({
- base:`/svg-morphing-ui/`,
+ // base:``,
   root: './src', // Specify the root directory, vite.config.js degil ama index.html bu yeni rootta olmalı!
 
     //alternatif
