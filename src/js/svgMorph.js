@@ -339,10 +339,77 @@ return (start+ progres*diff);
 
 }
 
-
+//some easing opions
 const easingFuncs=new Map();
-easingFuncs.set("easeInOutCubic",`function (x) {
-        return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-        };`)
+const easingFuncsString=new Map();
 
-export {getBezierCoordinates,changeStartingPoint, reverseDirection, addNewPoints,getSvgAttributes, pointsToString, animate,AnimationSvgElement,easingFuncs}
+easingFuncs.set("easeInOutCubic",function (x) {
+        return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+        })
+        easingFuncsString.set("easeInOutCubic",`function (x) {
+            return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+            };`);
+
+easingFuncs.set("easeInSine",function (x) {
+    return 1 - Math.cos((x * Math.PI) / 2);
+  });
+
+  easingFuncsString.set("easeInSine",`function (x) {
+    return 1 - Math.cos((x * Math.PI) / 2);
+  }`);
+
+
+  easingFuncs.set("easeOutQuad",function (x) {
+    return 1 - (1 - x) * (1 - x);
+    });
+    easingFuncsString.set("easeOutQuad",`function (x) {
+        return 1 - (1 - x) * (1 - x);
+        }`);
+
+    easingFuncs.set("easeInOutSine",function (x) {
+        return -(Math.cos(Math.PI * x) - 1) / 2;
+        });
+        easingFuncsString.set("easeInOutSine",`function (x) {
+            return -(Math.cos(Math.PI * x) - 1) / 2;
+            }`);
+
+
+        easingFuncs.set("easeInOutQuint",function (x) {
+            return x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
+            });
+            easingFuncsString.set("easeInOutQuint",`function (x) {
+                return x < 0.5 ? 16 * x * x * x * x * x : 1 - Math.pow(-2 * x + 2, 5) / 2;
+                }`);
+
+
+
+        
+            easingFuncs.set("easeOutCirc",function (x) {
+                return Math.sqrt(1 - Math.pow(x - 1, 2));
+                });
+                easingFuncsString.set("easeOutCirc",`function (x) {
+                    return Math.sqrt(1 - Math.pow(x - 1, 2));
+                    }`);
+
+
+    
+                easingFuncs.set("easeInCirc",function (x) {
+                    return 1 - Math.sqrt(1 - Math.pow(x, 2));
+                    });
+                    easingFuncsString.set("easeInCirc",`function (x) {
+                        return 1 - Math.sqrt(1 - Math.pow(x, 2));
+                        }`);
+
+
+                    easingFuncs.set("easeOutCirc",function (x) {
+                        return Math.sqrt(1 - Math.pow(x - 1, 2));
+                        });
+    
+                        
+                    easingFuncsString.set("easeOutCirc",`function (x) {
+                        return Math.sqrt(1 - Math.pow(x - 1, 2));
+                        }`);
+    
+
+
+export {getBezierCoordinates,changeStartingPoint, reverseDirection, addNewPoints,getSvgAttributes, pointsToString, animate,AnimationSvgElement,easingFuncs,easingFuncsString}

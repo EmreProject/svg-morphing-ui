@@ -24,8 +24,23 @@ function setSvgResult(svgFrom,svgTo){
 const startButton=document.querySelector("button.start-morph");
 const resultDiv=document.querySelector(".result-svg");
 const backButton=resultDiv.querySelector(".back");;
+const easingSelector=resultDiv.querySelector("select#easing");
 
 
+function loadEasingFunctions(){
+
+    [...easingSelector.children].forEach(a=>a.remove());
+
+
+    mySvgMorph.easingFuncs.forEach((value,key)=>{
+
+        const opt=`<option value="${key}">${key}</option>`
+        easingSelector.insertAdjacentHTML("beforeend",opt);
+
+    });
+
+}
+loadEasingFunctions();
 
 
 const codeOutput={
@@ -49,9 +64,8 @@ startButton.addEventListener("click",()=>{
     const resultDivChilds=[...resultDiv.children];
     resultDivChilds.forEach(a=> {if(a.tagName=="svg"){a.remove();}});
 
-    const easeInOutCubic = function (x) {
-        return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
-        };
+    const easingFuncResult=mySvgMorph.easingFuncs.get(easingSelector.value);
+    console.log(easingFuncResult(0.5));
 
         console.log(svgFrom_.svgElement);
         console.log(svgTo_.svgElement);
@@ -137,7 +151,7 @@ console.log(JSON.parse(jsonToString),jsonParameters);
     const resultSvgPath=document.querySelector(".path-end-result");
     const svgJson=\`${jsonToString}\`;
     const svgParams = JSON.parse(svgJson);
-    svgParams.easing=${mySvgMorph.easingFuncs.get("easeInOutCubic")};
+    svgParams.easing=${mySvgMorph.easingFuncsString.get(easingSelector.value)};
 
 
     mySvgMorph.animate(svgParams.svgfrom,svgParams.svgto,{svgElement: resultSvg,svgPathElement:resultSvgPath, timing:svgParams.easing, duration:svgParams.duration},svgParams.svgAttribs);
@@ -146,7 +160,7 @@ console.log(JSON.parse(jsonToString),jsonParameters);
 
     codeOutput.jsTexArea.textContent=codeOutput.js;
     
-    mySvgMorph.animate(svgFrom_.morphing.bezierPoints,svgTo_.morphing.bezierPoints,{svgElement: resultSvg,svgPathElement:resultSvgPath, timing:easeInOutCubic, duration:duration},svgAttribs);
+    mySvgMorph.animate(svgFrom_.morphing.bezierPoints,svgTo_.morphing.bezierPoints,{svgElement: resultSvg,svgPathElement:resultSvgPath, timing:easingFuncResult, duration:duration},svgAttribs);
     //console.log(mySvgMorph.pointsToString(newBezierPoints));
 
 });
