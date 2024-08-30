@@ -1,0 +1,17 @@
+html,body{
+
+    margin:0;
+    padding: 0;;
+    background-color:#0b001f;
+}
+
+
+svg{
+
+position: absolute;
+top:50%;
+left:50%;
+transform: translateX(-50%) translateY(-50%);
+
+}
+
