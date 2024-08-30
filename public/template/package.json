@@ -1,0 +1,21 @@
+{
+  "name": "svg_morphing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "abs-svg-path": "^0.1.1",
+    "normalize-svg-path": "^1.1.0",
+    "parse-svg-path": "^0.1.2",
+    "vite": "^5.3.4"
+  }
+}

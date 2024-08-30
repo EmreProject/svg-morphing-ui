@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./js/script.js"></script>
+  
+</head>
+<body>
+    
+    
+    <div class="settings-svg visible" >
+
+<div class="svg-shapes"> 
+
+    <div class="card from">
+
+<!--
+    <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" x="0" y="0" class="svg-shape-1" version="1.1" viewBox="0 0 511.999 511.999" width="200" height="200"><path d="M498.523 246.291c37.941-67.923-8.514-149.499-85.88-157.204l-28.232-2.813c-20.59-2.053-38.982-10.974-54.263-28.128-53.185-59.695-152.219-44.954-184.82 26.764-7.94 17.466-22.298 31.438-40.428 39.344l-39.773 17.34c-63.399 27.64-84.894 104.334-44.848 159.183l25.236 34.563c5.481 7.508 9.482 15.807 11.893 24.666l12.532 46.073c17.167 63.115 88.755 97.22 151.241 70.693l5.35-2.271c15.901-6.751 33.992-8.387 50.932-4.616l82.048 18.269c79.933 17.798 150.39-51.574 132.54-127.825l-10.384-44.351c-4.203-17.953-1.524-36.78 7.544-53.012l9.312-16.675z" fill="url(&quot;#SvgjsLinearGradient1038&quot;)"></path><defs><linearGradient id="SvgjsLinearGradient1038"><stop stop-color="#F3ACFF" offset="0"></stop><stop stop-color="#C77DFF" offset="1"></stop></linearGradient></defs></svg>
+-->
+
+<div class="fileDiv">
+    <form action="">
+
+        <div><h1>From</h1></div>
+        <input type="file" id="fileFrom" accept=".svg">
+        <button class="fileFrom" type="button"><label for="fileFrom">Choose svg</label></button>
+
+       
+        <button type="button" class="settings">Settings</button>
+      
+   </form>
+</div>
+
+</div>
+
+
+<div class="build-svg-from">
+
+ <p>In order to match right points for morphing choose direction(reverse or not) and starting index of svg </p>
+ <div>
+    <label for="startIndexFrom">Starting Point:</label>
+<select id="startIndexFrom" name="startIndexFrom">
+ 
+</select>
+  <label for="isReverseFrom">Reverse:</label>
+  <input type="checkbox" id="isReverseFrom" name="isReverseFrom"  />
+  <h3>Number of points</h3>
+  <h3 class="num-points">-1</h3>
+  <h3>Debug points font</h3>
+  <div class="debug-font">
+    <button class="minus">-</button>
+    <button class="plus">+</button>
+  </div>
+
+ </div>
+
+</div>
+
+<div class="build-svg-to">
+
+    <p>In order to match right points for morphing choose direction(reverse or not) and starting index of svg </p>
+    <div>
+       <label for="startIndexTo">Starting Point:</label>
+   <select id="startIndexTo" name="startIndexTo">
+    
+   </select>
+     <label for="isReverseTo">Reverse:</label>
+     <input type="checkbox" id="isReverseTo" name="isReverseTo"  />
+     <h3>Number of points</h3>
+     <h3 class="num-points">-1</h3>
+     <h3>Debug points font</h3>
+     <div class="debug-font">
+        <button class="minus">-</button>
+        <button class="plus">+</button>
+      </div>
+   
+    </div>
+
+
+</div>
+
+<button class="result">Next</button>
+
+
+
+<div class="card to">
+
+<!--
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="none"  class="svg-shape-2" viewBox="0 0 200 200"><path fill="url(#paint0_linear_104_44)" fill-rule="evenodd" d="M120 0H80v51.716L43.431 15.147 15.148 43.431 51.716 80H0v40h51.716l-36.569 36.568 28.285 28.285L80 148.284V200h40v-51.716l36.569 36.569 28.284-28.284L148.284 120H200V80h-51.716l36.569-36.569-28.284-28.284L120 51.716V0Z" clip-rule="evenodd"></path><defs><linearGradient id="paint0_linear_104_44" x1="100" x2="100" y1="0" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#C77DFF"></stop><stop offset="1" stop-color="#F3ACFF"></stop></linearGradient></defs></svg>
+    -->
+
+    <div class="fileDiv">
+        <form action="">
+            <div><h1>To</h1></div>
+            <input type="file" id="fileTo" accept=".svg">
+            <button class="fileTo" type="button"><label for="fileTo">Choose svg</label></button>
+          
+            <button type="button" class="settings">Settings</button>
+
+            
+       </form>
+    </div>
+
+
+
+</div>
+
+</div>
+
+
+<div class="svg-result">
+
+   
+    <div class="card">
+    <svg xmlns="http://www.w3.org/2000/svg" class="svg-shape-1" width="200" height="200" fill="none" viewBox="0 0 66 63"><path stroke="url(&quot;#SvgjsLinearGradient1017&quot;)" ></path><defs><linearGradient id="SvgjsLinearGradient1017"><stop stop-color="#fbc2eb" offset="0"></stop><stop stop-color="#a6c1ee" offset="1"></stop></linearGradient></defs></svg>
+</div>
+
+</div>
+</div>
+
+<div class="result-svg">
+
+<!--svg eklenecek-->
+
+<div class="settings-container">
+<h3>Easing: </h3>
+<select id="easing" name="easing">
+    <option value="easeInOutCubic">easeInOutCubic</option>
+</select>
+<h3>Duration(as milliseconds): </h3>
+<input class="duration" type="number" value="2000">
+</div>
+
+
+<button class="start-morph">Start Morphing</button>
+
+<div class="code-container">
+    <h3>Html:</h1>
+    <textarea class="html-part"  rows="3"
+    cols="45"></textarea>
+
+    <h3>Javascript:</h1>
+        <textarea class="js-part"  rows="5"
+        cols="45"></textarea>
+</div>
+
+<button class="back">Back To Settings</button>
+
+</div>
+
+
+
+</body>
+</html>
