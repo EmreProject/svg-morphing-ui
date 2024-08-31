@@ -186,8 +186,8 @@ function loadSvgSettingsFrom(main,{startIndex,reverseCheckbox,debugFont,numberPo
         console.log(newStart);
         console.log(main.morphing.bezierPoint);
         main.morphing.bezierPoints=mySvgMorph.changeStartingPoint(main.morphing.bezierPoints,newStart);
-
         main.morphing.animationSvg.setPath(mySvgMorph.pointsToString(main.morphing.bezierPoints));
+        svgDebug.set(main.svgElement, main.morphing.bezierPoints);
         resetDebugSvg();
         drawDebugPoints();
     };
@@ -324,8 +324,9 @@ let loadSettingsCallback2={
             console.log(newStart);
             console.log(main.morphing.bezierPoint);
             main.morphing.bezierPoints=mySvgMorph.changeStartingPoint(main.morphing.bezierPoints,newStart);
-    
+          
             main.morphing.animationSvg.setPath(mySvgMorph.pointsToString(main.morphing.bezierPoints));
+            svgDebug2.set(main.svgElement, main.morphing.bezierPoints);
             resetDebugSvg();
             drawDebugPoints();
         };
