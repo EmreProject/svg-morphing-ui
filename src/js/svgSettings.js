@@ -8,16 +8,34 @@ to:document.querySelector(".card.to button.settings")
 
 }
 
+const nextButton=document.querySelector("button.result");
+
 settingsButtons.from.addEventListener("click",function(){
 
+settingsButtons.to.classList.remove("clicked");
+
+const nextSize=nextButton.getBoundingClientRect();
+const topPx=nextSize.top+window.scrollY;
+const heightPx=nextSize.bottom+window.scrollY;
+
 const settingsDiv=document.querySelector("div.build-svg-from");
+settingsDiv.style.top=`${topPx}px`;
+settingsDiv.style.height=`${heightPx}px`;
 settingsDiv.classList.toggle("clicked");
 
 });
 
 settingsButtons.to.addEventListener("click",function(){
 
+
+    settingsButtons.from.classList.remove("clicked");
+
+    const nextSize=nextButton.getBoundingClientRect();
+    const heightPx=nextSize.bottom+window.scrollY;
+
     const settingsDiv=document.querySelector("div.build-svg-to");
+   settingsDiv.style.top=`0px`;
+   settingsDiv.style.height=`${heightPx}px`;
     settingsDiv.classList.toggle("clicked");
     
     });

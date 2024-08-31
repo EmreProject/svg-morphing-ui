@@ -212,8 +212,7 @@ div[class*=build-svg].clicked{
 
 div.build-svg-from{
 
-    top:47vh;
-    height:53vh;
+    
     box-shadow: inset 0px -5px 20px var(--color-8),inset 0px -5px 3px var(--color-8);
     border-width: 3px 0 0px 0 !important;
 }
@@ -221,8 +220,7 @@ div.build-svg-from{
 
 div.build-svg-to{
 
-    top:0;
-    height:53vh;
+   
     box-shadow: inset 0px 5px 20px var(--color-8),inset 0px 5px 3px var(--color-8);
     border-width: 0px 0 3px 0 !important;
 }
