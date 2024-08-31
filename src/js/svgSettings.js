@@ -418,7 +418,7 @@ const cardFrom={
             const svgEl2Path=svgEl2.querySelector("path");
             svgEl2.classList.add("svg-shape-1")
             svgEl2.setAttribute("width",`${bounding2.width/2 <300 ? 300: bounding2.width/2}px`);
-            svgEl2.setAttribute("height",`${bounding2.height/2.5}px`);
+            svgEl2.setAttribute("height",`${bounding2.height/2.9}px`);
 
             
             loadSvgMorphing(svgFrom,svgEl2,svgEl2Path);
@@ -487,7 +487,7 @@ const cardTo={
             const svgEl2Path=svgEl2.querySelector("path");
             svgEl2.classList.add("svg-shape-2")
             svgEl2.setAttribute("width",`${bounding2.width/2 <300 ? 300: bounding2.width/2}px`);
-            svgEl2.setAttribute("height",`${bounding2.height/2.5}px`);
+            svgEl2.setAttribute("height",`${bounding2.height/2.9}px`);
 
             loadSvgMorphing(svgTo,svgEl2,svgEl2Path);
 

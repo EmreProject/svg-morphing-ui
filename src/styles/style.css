@@ -71,6 +71,10 @@ text-align: center;
                 color: var(--color-8);
                 font-size: 1.5rem;
                 margin: 0;
+                font-family: "Audiowide", system-ui;
+    font-weight: 700;
+    font-style: normal;
+
             }
         }
 
@@ -87,6 +91,10 @@ text-align: center;
 
            width: 100%;
             margin-top: 10px;
+            font-family: "Audiowide", system-ui;
+     font-weight: 400;
+            font-style: normal;
+            font-size:0.65rem;
 
         }
 
@@ -157,6 +165,9 @@ div[class*=build-svg]{
         max-width: 280px;
         width: 55%;
         text-align: center;
+        font-weight:400;
+        font-size: 0.8rem;
+        font-family: "Oxygen", sans-serif;
     }
 
     & div{
@@ -168,15 +179,20 @@ div[class*=build-svg]{
         
         & h3{
 
-            font-weight: 300;
-            font-size: 1.2rem;
+            font-weight:400;
+            font-size: 0.9rem;
+            font-family: "Oxygen", sans-serif;
             text-align: center;
+            
         }
 
         & label{
 
             font-weight: 300;
-            font-size: 1.2rem;
+            font-size: 0.9rem;
+            font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 
         }
 
@@ -199,6 +215,8 @@ div[class*=build-svg]{
             outline: none;
             border: none;
             appearance: none;
+            font-weight: 400;
+        font-style: normal;
             
            }
         }
@@ -212,7 +230,8 @@ div[class*=build-svg].clicked{
 
 div.build-svg-from{
 
-    
+    width: 100%;
+    padding: 0% 15px;
     box-shadow: inset 0px -5px 20px var(--color-8),inset 0px -5px 3px var(--color-8);
     border-width: 3px 0 0px 0 !important;
 }
@@ -220,7 +239,8 @@ div.build-svg-from{
 
 div.build-svg-to{
 
-   
+    width: 100%;
+    padding: 0% 15px;
     box-shadow: inset 0px 5px 20px var(--color-8),inset 0px 5px 3px var(--color-8);
     border-width: 0px 0 3px 0 !important;
 }
